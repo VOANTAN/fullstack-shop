@@ -15,7 +15,7 @@ mongoose
   .then(() => {
     console.log("✅ Đã kết nối MongoDB");
     app.listen(process.env.PORT, () =>
-      console.log(`🚀 Server chạy tại http://localhost:${process.env.PORT}`)
+      console.log(`🚀 Server chạy tại cổng: ${process.env.PORT}`)
     );
   })
   .catch((err) => console.error("❌ MongoDB lỗi:", err));
