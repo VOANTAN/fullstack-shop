@@ -7,7 +7,7 @@ export default function AdminOrders() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/orders")
+      .get("https://fullstack-backend-2sx6.onrender.com/api/orders")
       .then((res) => setOrders(res.data))
       .catch((err) => console.error(err));
   }, []);
