@@ -45,7 +45,9 @@ export default function AdminOrders() {
                   window.confirm("Bạn có chắc chắn xoá đơn hàng này không?")
                 ) {
                   axios
-                    .delete(`http://localhost:5000/api/orders/${order._id}`)
+                    .delete(
+                      `https://fullstack-backend-2sx6.onrender.com/api/orders/${order._id}`
+                    )
                     .then(() => {
                       toast.success("✅ Đã xoá đơn hàng!");
                       setOrders((prev) =>

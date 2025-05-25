@@ -19,10 +19,13 @@ export default function Checkout() {
     if (cart.length === 0) return toast.error("Giỏ hàng trống!");
 
     try {
-      await axios.post("http://localhost:5000/api/orders", {
-        ...form,
-        items: cart,
-      });
+      await axios.post(
+        "https://fullstack-backend-2sx6.onrender.com/api/orders",
+        {
+          ...form,
+          items: cart,
+        }
+      );
 
       toast.success("✅ Đặt hàng thành công!");
       setCart([]);
